@@ -9,7 +9,7 @@
 
 ## 🚀 Running Locally <treesocial>
 
-You need to install Node.js and Yarn first, then in order to clone the project via HTTPS, run this command:
+A page with a list of links that can be used on social media profiles.
 
 # Made
 

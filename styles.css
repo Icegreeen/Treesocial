@@ -7,18 +7,25 @@
   text-decoration: none;
 }
 
-/* font-family: 'Poppins', sans-serif; */
+.dark {
+  --background: #dfdedd;
+  --purple: #b190d3;
+  --font: "Poppins", sans-serif;
+}
 
 :root {
-  --body-bg-color: #faf7fd;
-  --purple: #bb99dd;
+  --background: #202024;
+  --button: #b190d3;
+  --purple: #a8a8b3;
   --font: "Poppins", sans-serif;
 }
 
 body {
   display: flex;
-  background: linear-gradient(40deg, #e2e2e2 50%, #bfc4c5 100%);
+  background: var(--background);
 }
+
+/* 320px — 480px: Mobile devices. */
 
 main {
   width: 100vw;
@@ -27,6 +34,21 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  width: 7rem;
+  height: 2rem;
+  color: var(--button);
+  background: none;
+  border-radius: 6px;
+  border: 2px solid var(--purple);
 }
 
 .info {
@@ -49,9 +71,7 @@ main {
   margin-top: 2rem;
 
   border: 3.5px solid var(--purple);
-  padding: 6px;
-
-  box-shadow: 1px 5px 10px 5px rgb(219, 219, 219);
+  padding: 7px;
 }
 
 .nav {
@@ -66,12 +86,18 @@ main {
   margin-right: 9px;
 }
 
+.nav li a {
+  color: var(--purple);
+}
+
 .nav li {
   display: flex;
   justify-content: center;
   align-items: center;
 
   font-family: var(--font);
+
+  color: var(--purple);
 
   cursor: pointer;
   width: 100%;
@@ -80,8 +106,6 @@ main {
   border-radius: 40px;
   font-size: 0.9rem;
   border: 2px solid var(--purple);
-
-  box-shadow: 1px 5px 10px 5px rgb(235, 235, 235);
 }
 
 .social-network {
@@ -98,16 +122,26 @@ main {
 }
 
 .linha-horizontal {
-  margin-top: 20px;
+  margin-top: 25px;
   width: 300px;
   border: 1px solid var(--purple);
 }
 
-/*
+/* 769px — 1024px: Small screens, laptops. */
 
-320px — 480px: Mobile devices. tô aqui
-481px — 768px: iPads, Tablets.
-769px — 1024px: Small screens, laptops.
-1025px — 1200px: Desktops, large screens.
+/* 1025px — 1200px: Desktops, large screens. */
 
-*/
+@media (min-width: 1200px) {
+  .info {
+    display: flex;
+  }
+
+  .photo-profile {
+    width: 35%;
+    float: left;
+  }
+
+  .nav {
+    width: 40%;
+  }
+}
